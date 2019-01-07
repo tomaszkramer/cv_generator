@@ -42,17 +42,14 @@ body {
     height: 223px;
 }
 
-button {
-    display: block;
-    float: right;
-}
+
 
 .box {
 
 }
 
 .text-field {
-    margin: 20px 0 0 0;
+    margin: 30px 0 0 0;
     min-height: 30px;
     max-width: 100%;
     border: 1px solid grey;
@@ -92,6 +89,13 @@ h2 {
     text-align: justify;
 }
 
+.name {
+    display: block;
+    margin: 20px auto;
+}
+
+/*icons*/
+
 .fa-mobile-alt {
     font-size: 2em;
     color: darkslategray;
@@ -113,7 +117,80 @@ h2 {
     display: block;
 }
 
-.name {
+.fa-save {
+    font-size: 2em;
+    color: grey;
+    margin-right: 5px;
+}
+
+.fa-edit {
+    font-size: 2em;
+    color: grey;
+    margin-right: 5px;
+}
+
+.fa-plus-square {
+    font-size: 2em;
+    margin-right: 5px;
+    color: grey;
+}
+
+.fa-trash-alt {
+    font-size: 1.9em;
+    color: grey;
+    margin-right: 5px;
+}
+
+i {
     display: block;
-    margin: 20px auto;
+}
+
+/*buttons*/
+
+button {
+    display: block;
+    float: right;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.save-edit {
+    position: relative;
+}
+
+.save-edit::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    top: -1px;
+}
+
+.add {
+    position: relative;
+}
+
+.add::before {
+    content: '';
+    width: 32px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    top: -1px;
+}
+
+.remove {
+    position: relative;
+}
+
+.remove::before {
+    content: '';
+    width: 32px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    top: -1px;
+    margin-right: 5px;
 }

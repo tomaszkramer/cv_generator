@@ -1,7 +1,7 @@
-    let buttons = document.querySelectorAll('.add');
+    let Addbuttons = document.querySelectorAll('.add');
     let holder = document.querySelector('.drag-drop');
     let saveEditButtons = document.querySelectorAll('.save-edit');
-    console.log(saveEditButtons)
+
     holder.ondrop = function(event){
         event.preventDefault();
         let file = event.dataTransfer.files[0];
@@ -21,7 +21,7 @@
         event.preventDefault();
     };
 
-    buttons.forEach(function (elem) {
+    Addbuttons.forEach(function (elem) {
         elem.addEventListener('click', addItem);
     });
 
@@ -34,46 +34,65 @@
         let box = item.target.parentElement;
         let addedItem = document.createElement('div');
         let div = document.createElement('div');
-        let btn = document.createElement('button');
+        let btnAdd = document.createElement('button');
         let btnSaveEdit = document.createElement('button');
         let btnRemove = document.createElement('button');
+        let iconSave = document.createElement('i');
+        let iconAdd = document.createElement('i');
+        let iconRemove = document.createElement('i');
+        iconAdd.classList.add('fa');
+        iconAdd.classList.add('fa-plus-square');
+        iconSave.classList.add('fa');
+        iconSave.classList.add('fa-save');
+        iconRemove.classList.add('fas');
+        iconRemove.classList.add('fa-trash-alt');
         addedItem.classList.add('added-item');
-        btnSaveEdit.innerText = 'SAVE';
+        btnSaveEdit.classList.add('save-edit');
+        btnSaveEdit.value = 'edit';
+        btnSaveEdit.append(iconSave);
+        btnAdd.classList.add('add');
+        btnAdd.append(iconAdd);
         btnRemove.classList.add('remove');
-        btnRemove.innerText = 'REMOVE';
+        btnRemove.append(iconRemove);
         div.classList.add('text-field');
-        div.contentEditable = true;
-        btn.innerText = 'ADD';
+        div.contentEditable = 'true';
+        console.log(div);
+
         box.append(addedItem);
         addedItem.append(div);
-        addedItem.append(btn);
         addedItem.append(btnSaveEdit);
+        addedItem.append(btnAdd);
         addedItem.append(btnRemove);
-        buttons = document.querySelectorAll('button');
-        btn.addEventListener('click', addItem);
+        console.log(btnSaveEdit);
+        Addbuttons = document.querySelectorAll('button');
+        btnAdd.addEventListener('click', addItem);
         btnSaveEdit.addEventListener('click', saveEditItem);
         btnRemove.addEventListener('click', removeItem);
     }
 
     function saveEditItem(item) {
-        let div = item.target.parentElement.firstElementChild;
+        let div = item.target.previousElementSibling;
+        let icon = item.target.firstElementChild;
 
-        if(item.target.innerText === "EDIT"){
-
-            div.contentEditable = true;
-            div.classList.remove('text-saved');
-            div.classList.add('text-field');
-            item.target.innerText = 'SAVE';
-        } else{
-            div.contentEditable = false;
+        if(item.target.value === 'edit'){
+            div.contentEditable = 'false';
+            console.log(div);
             div.classList.remove('text-field');
             div.classList.add('text-saved');
-            item.target.innerText = 'EDIT';
+            icon.classList.remove('fa-save');
+            icon.classList.add('fa-edit');
+            item.target.value = 'save';
+        } else {
+            div.contentEditable = 'true';
+            div.classList.remove('text-saved');
+            div.classList.add('text-field');
+            icon.classList.remove('fa-edit');
+            icon.classList.add('fa-save');
+            item.target.value = 'edit';
         }
     }
 
     function removeItem(item) {
-        console.log(item.target);
         let box = item.target.parentElement;
         console.log(box);
         box.parentElement.removeChild(box);
