@@ -7,22 +7,53 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CV Creator</title>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
  <section class="main">
    <div class="grid">
        <div class="grid-item-1">
            <div class="drag-drop">
-               Drop picture here
+               <p>Drop picture here</p>
            </div>
            <div class="icon">
                <i class="far fa-address-card"></i>
-               <input class="name" type="text" placeholder="type name here">
-               <input  class="name" type="text" placeholder="type lastname here">
+               <div class="name">
+                <div  class="text-field" contenteditable="true"></div>
+                <button class="save-edit"><i class="fas fa-save darkgrey"></i></button>
+               </div>
+               <div class="address">
+                   <i class="fas fa-mobile-alt"></i>
+                   <div>
+                      <div class="text-field" contenteditable="true"></div>
+                      <button class="save-edit"><i class="fa fa-save darkgrey"></i></button>
+                   </div>
+                   <i class="fas fa-at"></i>
+                   <div>
+                      <div class="text-field" contenteditable="true"></div>
+                       <button class="save-edit"><i class="fa fa-save darkgrey"></i></button>
+                   </div>
+               </div>
                <fieldset>
                    <legend>Choose link</legend>
-                   <i class="fas fa-mobile-alt"></i>
-                   <i class="fas fa-at"></i>
+                   <div class="inline">
+                       <div class="icon-choose">
+                           <i class="fab fa-github"></i>
+                       </div>
+                       <input type="checkbox">
+                   </div>
+                   <div class="inline">
+                       <div class="icon-choose">
+                           <i class="fab fa-linkedin"></i>
+                       </div>
+                       <input type="checkbox">
+                   </div>
+                   <div class="inline">
+                       <div class="icon-choose">
+                           <i class="fab fa-stack-overflow"></i>
+                       </div>
+                       <input type="checkbox">
+                   </div>
                </fieldset>
            </div>
        </div>
@@ -32,7 +63,8 @@
                <h2 class="profile">PROFILE</h2>
                <div class="line">
                 <div class="text-field" contenteditable="true"></div>
-                <button class="save-edit" value = "edit"><i class="fas fa-save"></i></button>
+                <div style="clear: both;"></div>
+                   <button class="save-edit" value = "edit"><i class="fas fa-save"></i></button>
                </div>
            </div>
            <div class="box">

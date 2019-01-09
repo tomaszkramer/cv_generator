@@ -48,6 +48,10 @@ body {
 
 }
 
+.inline {
+    display: inline-block;
+}
+
 .text-field {
     margin: 30px 0 0 0;
     min-height: 30px;
@@ -55,14 +59,23 @@ body {
     border: 1px solid grey;
 }
 
+.text-field-name {
+    margin: 30px 0 0 0;
+    min-height: 30px;
+    max-width: 100%;
+    border: 1px solid grey;
+    padding: 0 10px 0 10px;
+}
+
 .text-saved {
     margin: 20px 0 0 20px;
     min-height: 30px;
     max-width: 100%;
+    overflow-wrap: break-word;
 }
 
 .added-item {
-
+    margin-left: 20px;
 }
 
 .line {
@@ -89,9 +102,24 @@ h2 {
     text-align: justify;
 }
 
+/*right column name and address area*/
+
 .name {
     display: block;
-    margin: 20px auto;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    margin: auto;
+}
+
+.address {
+    padding-top: 10px;
+}
+
+.icon-choose {
+    text-align: center;
+    text-align: -moz-center;
+    text-align: -webkit-center;
 }
 
 /*icons*/
@@ -141,6 +169,16 @@ h2 {
     margin-right: 5px;
 }
 
+.fa-linkedin {
+    color: blue;
+    margin-left: 3px;
+}
+
+.fa-stack-overflow {
+    color: orangered;
+    margin-left: 3px;
+}
+
 i {
     display: block;
 }
@@ -153,6 +191,10 @@ button {
     border: none;
     background: transparent;
     padding: 0;
+}
+
+.darkgrey {
+    color: darkslategray;
 }
 
 .save-edit {

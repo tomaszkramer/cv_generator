@@ -13,6 +13,7 @@
             holder.appendChild(img);
             holder.classList.remove('drag-drop');
             holder.classList.add('dropped');
+            holder.style.color = 'transparent';
         };
         reader.readAsDataURL(file);
     };
@@ -32,6 +33,8 @@
     function addItem(item) {
 
         let box = item.target.parentElement;
+        let box2 = box.parentElement;
+        console.log(box2);
         let addedItem = document.createElement('div');
         let div = document.createElement('div');
         let btnAdd = document.createElement('button');
@@ -56,14 +59,12 @@
         btnRemove.append(iconRemove);
         div.classList.add('text-field');
         div.contentEditable = 'true';
-        console.log(div);
 
-        box.append(addedItem);
+        box2.append(addedItem);
         addedItem.append(div);
         addedItem.append(btnSaveEdit);
         addedItem.append(btnAdd);
         addedItem.append(btnRemove);
-        console.log(btnSaveEdit);
         Addbuttons = document.querySelectorAll('button');
         btnAdd.addEventListener('click', addItem);
         btnSaveEdit.addEventListener('click', saveEditItem);
@@ -71,14 +72,18 @@
     }
 
     function saveEditItem(item) {
-        let div = item.target.previousElementSibling;
+        let divPar = item.target.parentElement;
+        let div = divPar.children[0];
+        let divClear = divPar.children[1];
+        console.log(div);
         let icon = item.target.firstElementChild;
 
         if(item.target.value === 'edit'){
             div.contentEditable = 'false';
-            console.log(div);
             div.classList.remove('text-field');
             div.classList.add('text-saved');
+            divClear.style.clear= 'both';
+            console.log(divClear);
             icon.classList.remove('fa-save');
             icon.classList.add('fa-edit');
             item.target.value = 'save';

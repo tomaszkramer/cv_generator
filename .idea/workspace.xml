@@ -23,8 +23,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="81" column="53" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="53" />
+                <state relative-caret-position="374">
+                  <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+                  <folding>
+                    <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -33,20 +36,20 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="410">
-                  <caret line="51" column="23" lean-forward="true" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+                <state relative-caret-position="400">
+                  <caret line="178" column="21" lean-forward="true" selection-start-line="178" selection-start-column="21" selection-end-line="178" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="464">
-                  <caret line="97" column="43" lean-forward="true" selection-start-line="97" selection-start-column="43" selection-end-line="97" selection-end-column="43" />
+                <state relative-caret-position="274">
+                  <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
@@ -66,9 +69,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -81,20 +84,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="cv_generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cv_generator" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -143,14 +133,20 @@
       <workItem from="1546846982229" duration="574000" />
       <workItem from="1546856228214" duration="5865000" />
       <workItem from="1546872824808" duration="450000" />
+      <workItem from="1546874744843" duration="1999000" />
+      <workItem from="1546884407066" duration="439000" />
+      <workItem from="1546936328149" duration="339000" />
+      <workItem from="1546967100422" duration="486000" />
+      <workItem from="1547023238234" duration="8411000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49742000" />
+    <option name="totallyTimeSpent" value="61416000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24944155" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -164,7 +160,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32921174" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -175,24 +171,27 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="81" column="53" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="53" />
+        <state relative-caret-position="374">
+          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="51" column="23" lean-forward="true" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="97" column="43" lean-forward="true" selection-start-line="97" selection-start-column="43" selection-end-line="97" selection-end-column="43" />
+        <state relative-caret-position="400">
+          <caret line="178" column="21" lean-forward="true" selection-start-line="178" selection-start-column="21" selection-end-line="178" selection-end-column="21" />
         </state>
       </provider>
     </entry>
