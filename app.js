@@ -64,23 +64,13 @@
             }
     }
 
-    function iterateArr() {
-        iconArr.map(elem=>{
-            let p = document.createElement('p');
-            let divInline = document.querySelector('.inline');
-            let iconChoose = document.querySelector('.icon-choose');
-            console.log(elem.icon + elem.url)
-            // divInline.appendChild()
-        })
-    }
-
     function addLastChild(elem) {
         let i = elem.length - 1;
         let pIcon = document.createElement('p');
         let pUrl = document.createElement('p');
         let iconChoose = document.createElement('div');
         let divInline = document.createElement('div');
-        let fieldset = document.querySelector('fieldset');
+        let awesomeIcons = document.querySelector('.awesome-icons');
         divInline.classList.add('inline');
         iconChoose.classList.add('icon-choose');
         iconChoose.style.display = 'inline';
@@ -88,16 +78,13 @@
         pIcon.style.display = 'inline';
         pUrl.innerHTML = elem[i].url;
         pUrl.style.display = 'inline';
-        fieldset.appendChild(divInline);
+        awesomeIcons.appendChild(divInline);
         divInline.appendChild(iconChoose);
         iconChoose.appendChild(pIcon);
         divInline.appendChild(pUrl);
-        console.log(iconChoose)
-
     }
 
     function addItem(item) {
-
         let box = item.target.parentElement;
         let box2 = box.parentElement;
         console.log(box2);
@@ -168,5 +155,3 @@
         console.log(box);
         box.parentElement.removeChild(box);
     }
-
-    iterateArr();
