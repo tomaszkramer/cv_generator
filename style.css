@@ -28,7 +28,10 @@ body {
     border: 1px dashed grey;
     margin: 70px auto auto auto;
     text-align: center;
-    line-height: 200px;
+}
+
+.drag-drop p {
+    margin-top: 85px;
 }
 
 .dropped {
@@ -49,7 +52,7 @@ body {
 }
 
 .inline {
-    display: inline-block;
+    /*display: inline-flex;*/
 }
 
 .text-field {
@@ -120,6 +123,7 @@ h2 {
     text-align: center;
     text-align: -moz-center;
     text-align: -webkit-center;
+    margin-right: 3px;
 }
 
 /*icons*/
@@ -235,4 +239,12 @@ button {
     position: absolute;
     top: -1px;
     margin-right: 5px;
+}
+
+#showDiv {
+    float: inherit;
+}
+
+#confirm {
+    float: inherit;
 }

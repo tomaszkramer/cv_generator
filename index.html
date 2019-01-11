@@ -14,7 +14,8 @@
    <div class="grid">
        <div class="grid-item-1">
            <div class="drag-drop">
-               <p>Drop picture here</p>
+               <p>Drop picture here<br>
+               220px x 223px</p>
            </div>
            <div class="icon">
                <i class="far fa-address-card"></i>
@@ -36,23 +37,16 @@
                </div>
                <fieldset>
                    <legend>Choose link</legend>
-                   <div class="inline">
-                       <div class="icon-choose">
-                           <i class="fab fa-github"></i>
-                       </div>
-                       <input type="checkbox">
-                   </div>
-                   <div class="inline">
-                       <div class="icon-choose">
-                           <i class="fab fa-linkedin"></i>
-                       </div>
-                       <input type="checkbox">
-                   </div>
-                   <div class="inline">
-                       <div class="icon-choose">
-                           <i class="fab fa-stack-overflow"></i>
-                       </div>
-                       <input type="checkbox">
+                   <p>You can add link of your github repositories, LinkedIn account etc.
+                       <i class="fab fa-github"></i>
+                       <i class="fab fa-linkedin"></i>
+                       <i class="fab fa-stack-overflow"></i>
+                   </p>
+                   <button id='showDiv' >show input fields</button>
+                   <div class="" id="addIcon" style="display: none">
+                       <input  id = 'icon' type="text" placeholder="fontawesome icon">
+                       <input type="text" id="url" placeholder="url">
+                       <button id='confirm' >confirm</button>
                    </div>
                </fieldset>
            </div>
