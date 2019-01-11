@@ -1,4 +1,4 @@
-    let Addbuttons = document.querySelectorAll('.add');
+    let addbuttons = document.querySelectorAll('.add');
     let holder = document.querySelector('.drag-drop');
     let par = document.querySelector('.drag-drop p');
     let saveEditButtons = document.querySelectorAll('.save-edit');
@@ -6,6 +6,8 @@
     let confirm = document.querySelector('#confirm');
     let showDiv = document.querySelector('#addIcon');
     let showDivButton = document.querySelector('#showDiv');
+    let create = document.querySelector('.create');
+    let fieldset = document.querySelector('fieldset');
 
     holder.ondrop = function(event){
         event.preventDefault();
@@ -28,7 +30,7 @@
         event.preventDefault();
     };
 
-    Addbuttons.forEach(function (elem) {
+    addbuttons.forEach(function (elem) {
         elem.addEventListener('click', addItem);
     });
 
@@ -39,6 +41,8 @@
     confirm.addEventListener('click', addIcon);
 
     showDivButton.addEventListener('click', display);
+
+    create.addEventListener('click', createCv);
 
     function display() {
         if(showDiv.style.display !== 'block'){
@@ -57,7 +61,6 @@
                 alert('none field may be empty')
             } else {
                 iconArr.push({icon: icon.value, url: url.value});
-                console.log(iconArr);
                 icon.value = '';
                 url.value = '';
                 addLastChild(iconArr)
@@ -67,27 +70,25 @@
     function addLastChild(elem) {
         let i = elem.length - 1;
         let pIcon = document.createElement('p');
-        let pUrl = document.createElement('p');
+        let pUrl = document.createElement('a');
         let iconChoose = document.createElement('div');
         let divInline = document.createElement('div');
         let awesomeIcons = document.querySelector('.awesome-icons');
         divInline.classList.add('inline');
         iconChoose.classList.add('icon-choose');
-        iconChoose.style.display = 'inline';
         pIcon.innerHTML = elem[i].icon;
-        pIcon.style.display = 'inline';
-        pUrl.innerHTML = elem[i].url;
-        pUrl.style.display = 'inline';
+        pUrl.classList.add('link');
+        pUrl.href = elem[i].url;
+        pUrl.innerText = elem[i].url;
         awesomeIcons.appendChild(divInline);
         divInline.appendChild(iconChoose);
         iconChoose.appendChild(pIcon);
-        divInline.appendChild(pUrl);
+        iconChoose.appendChild(pUrl);
     }
 
     function addItem(item) {
         let box = item.target.parentElement;
         let box2 = box.parentElement;
-        console.log(box2);
         let addedItem = document.createElement('div');
         let div = document.createElement('div');
         let btnAdd = document.createElement('button');
@@ -118,7 +119,7 @@
         addedItem.append(btnSaveEdit);
         addedItem.append(btnAdd);
         addedItem.append(btnRemove);
-        Addbuttons = document.querySelectorAll('button');
+        addbuttons = document.querySelectorAll('button');
         btnAdd.addEventListener('click', addItem);
         btnSaveEdit.addEventListener('click', saveEditItem);
         btnRemove.addEventListener('click', removeItem);
@@ -128,7 +129,6 @@
         let divPar = item.target.parentElement;
         let div = divPar.children[0];
         let divClear = divPar.children[1];
-        console.log(div);
         let icon = item.target.firstElementChild;
 
         if(item.target.value === 'edit'){
@@ -136,7 +136,6 @@
             div.classList.remove('text-field');
             div.classList.add('text-saved');
             divClear.style.clear= 'both';
-            console.log(divClear);
             icon.classList.remove('fa-save');
             icon.classList.add('fa-edit');
             item.target.value = 'save';
@@ -152,6 +151,25 @@
 
     function removeItem(item) {
         let box = item.target.parentElement;
-        console.log(box);
         box.parentElement.removeChild(box);
+    }
+    
+    function createCv() {
+
+        addbuttons.forEach(elem=>{
+            elem.style.display = 'none';
+        });
+
+        saveEditButtons.forEach(elem=>{
+            elem.style.display = 'none';
+        });
+
+        fieldset.style.display = 'none';
+
+        let divs = document.querySelectorAll('.text-field');
+        divs.forEach(elem=>{
+            elem.classList.remove('text-field');
+            elem.classList.add('text-saved');
+        })
+
     }
