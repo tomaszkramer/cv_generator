@@ -3,8 +3,9 @@
 designed with **fontawesome** allows to create CV for IT developers:
 - drag and drop photo,
 - add stages of careera,
-- add project designed.
+- add projects,
+- add links.
 
-*In development state*
+
 
 
