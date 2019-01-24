@@ -7,6 +7,7 @@
     let showDiv = document.querySelector('#addIcon');
     let showDivButton = document.querySelector('#showDiv');
     let create = document.querySelector('.create');
+    let print = document.querySelector('.print');
     let fieldset = document.querySelector('fieldset');
 
     holder.ondrop = function(event){
@@ -43,6 +44,12 @@
     showDivButton.addEventListener('click', display);
 
     create.addEventListener('click', createCv);
+
+    print.addEventListener('click', printCv);
+
+    function printCv() {
+        window.print()
+    }
 
     function display() {
         if(showDiv.style.display !== 'block'){

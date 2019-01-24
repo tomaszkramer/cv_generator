@@ -41,8 +41,8 @@ body {
 }
 
 .picture {
-    width: 200px;
-    height: 223px;
+    max-width: 200px;
+    max-height: 223px;
 }
 
 
@@ -61,6 +61,7 @@ body {
     min-height: 30px;
     max-width: 100%;
     border: 1px solid grey;
+    overflow-wrap: break-word;
 }
 
 .text-field-name {
@@ -221,6 +222,8 @@ button {
     box-shadow: 2px 2px 5px brown;
     padding: 2px;
     width: 80px;
+    position: fixed;
+    right: 5px;
 }
 
 .darkgrey {
@@ -235,6 +238,9 @@ button {
     box-shadow: 2px 2px 5px brown;
     padding: 2px;
     width: 80px;
+    position: fixed;
+    right: 5px;
+    top: 140px;
 }
 
 .save-edit {
@@ -288,3 +294,16 @@ button {
 #confirm {
     float: inherit;
 }
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+    }
+    button {
+        display: none;
+    }
+}
+
+
+
+
